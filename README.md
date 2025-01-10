@@ -7,8 +7,13 @@ lusb
 ```
 The board should show as: "STMicroelectronics STM Device in DFU Mode"
 
-Copy the device ID (in this case "0483:df11"
+Copy the device ID (in this case "0483:df11") and flash the device with the command:
 
+```
+make flash FLAHS_DEVICE=0483:df11
+```
+
+(Make sure that you input the correct device ID in the command)
 
 References:
 https://klipper.discourse.group/t/canbus-bridge-mode-configuration/6693
