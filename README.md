@@ -12,19 +12,19 @@ The Biqu / Bigtreetech documentation is lacking
 
   I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid.
 <br/>
-
+<br/>
 2. Configure the Wi-Fi connection or plug in an ethernet cable to the board
 
   https://bttwiki.com/CB2.html#using-ethernet
 <br/>
-
+<br/>
 3. Connect to the CB2 using SSH
 
   https://bttwiki.com/CB2.html#ssh-connect-to-device
 
   Alternatively use Putty to establish the SSH connection, however I found the recommended software easier to use.
 <br/>
-
+<br/>
 ## Flashing the MCU - Manta Controller Board
 
 
