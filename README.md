@@ -3,7 +3,7 @@ Guide on how to configure CAN Bus on the Bigtreetech Manta M5P with a CB2 V1.0 b
 
 The Biqu / Bigtreetech documentation is lacking 
 
-##Initial Setup
+## Initial Setup
 
 1. Plug in the CB2 module on the Manta board and flash the System image on the CB2 following the official guide:
 
@@ -21,7 +21,7 @@ https://bttwiki.com/CB2.html#ssh-connect-to-device
 
 Alternatively use Putty to establish the SSH connection, however I found the recommended software easier to use.
 
-##Flashing the MCU - Manta Controller Board
+## Flashing the MCU - Manta Controller Board
 
 
 
