@@ -4,48 +4,110 @@ Guide on how to configure CAN Bus on the Bigtreetech Manta M5P with a CB2 V1.0 b
 The Biqu / Bigtreetech documentation is lacking 
 
 ## Initial Setup
+
 <br/>
 
 1. Plug in the CB2 module on the Manta board and flash the System image on the CB2 following the official guide:
 
   https://bttwiki.com/CB2.html#flashing-the-system
 
-  I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid.<br/><br/>
-<br/>
-<br/>
+  > I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid. 
+  
+  <br/>
+
 2. Configure the Wi-Fi connection or plug in an ethernet cable to the board
 
-  https://bttwiki.com/CB2.html#using-ethernet
-<br/>
-<br/>
+  https://bttwiki.com/CB2.html#using-ethernet\
+
+  <br/>
+
 3. Connect to the CB2 using SSH
 
   https://bttwiki.com/CB2.html#ssh-connect-to-device
 
-  Alternatively use Putty to establish the SSH connection, however I found the recommended software easier to use.
+  > Alternatively use Putty to establish the SSH connection, however I found the recommended software easier to use.
+
+  Use the default login credentials:
+
+```
+login as: biqu
+password: biqu
+```
+
 <br/>
-<br/>
+
 ## Flashing the MCU - Manta Controller Board
 
+<br/>
+
+By now you should be able to connect to the CB2 via SSH
+
+The MCU needs to be flashed with the USB to CAN bridge
+
+1. Change directory to the klipper folder
+
+```
+cd klipper/
+```
+
+2. Enter the configuration menu
+
+```
+make menuconfig
+```
+
+3. Chose the correct options according to the MCU board following the official guide for the board **EXCEPT for the "Communication Interface"**
 
 
-List connected devices with:
+**The "Communication Interface" should be set to "USB to CAN Bus Bridge"**
+
+The CAN Bus interface should be set to the correct PIN for the board
+
+> To check which PINs the CAN interface should be set to, see the official .cfg file of the board on GitHub
+
+4. Exit configuration menu pressing "q" and then "y" to save changes
+
+5. Compile the firmware with the command
+
+```
+make
+```
+
+6. Put the Manta board in boot mode
+   - Press and hold the BOOT0 button
+   - Press and release the RESET button
+   - Release the BOOT0 button
+
+7. Check if the Manta board is ready by listing connected devices with:
+
 ```
 lsusb
 ```
+
 The board should show as: "STMicroelectronics STM Device in DFU Mode"
 
-Copy the device ID (in this case "0483:df11") and flash the device with the command:
+8. Copy the device ID (in this case "0483:df11") and flash the device with the command:
 
 ```
 make flash FLASH_DEVICE=0483:df11
 ```
 
-(Make sure that you input the correct device ID in the command)
+> Make sure that you input the correct device ID in the command
 
 If it promps for the sudo password, enter your password, default is "biqu"
 
-Press and realease the "Reset" button on the board
+9. Press and realease the "Reset" button on the board, or power cycle the hardware
+
+10. Check if the CAN Bus network is visible with the command
+
+
+```
+ifconfig
+```
+
+You should see a network named "can0"
+
+11. 
 
 References:
 https://klipper.discourse.group/t/canbus-bridge-mode-configuration/6693
