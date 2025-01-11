@@ -5,21 +5,25 @@ The Biqu / Bigtreetech documentation is lacking
 
 ## Initial Setup
 
+
 1. Plug in the CB2 module on the Manta board and flash the System image on the CB2 following the official guide:
 
-https://bttwiki.com/CB2.html#flashing-the-system
+  https://bttwiki.com/CB2.html#flashing-the-system
 
-I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid.
+  I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid.
+
 
 2. Configure the Wi-Fi connection or plug in an ethernet cable to the board
 
-https://bttwiki.com/CB2.html#using-ethernet
+  https://bttwiki.com/CB2.html#using-ethernet
+
 
 3. Connect to the CB2 using SSH
 
-https://bttwiki.com/CB2.html#ssh-connect-to-device
+  https://bttwiki.com/CB2.html#ssh-connect-to-device
 
-Alternatively use Putty to establish the SSH connection, however I found the recommended software easier to use.
+  Alternatively use Putty to establish the SSH connection, however I found the recommended software easier to use.
+
 
 ## Flashing the MCU - Manta Controller Board
 
