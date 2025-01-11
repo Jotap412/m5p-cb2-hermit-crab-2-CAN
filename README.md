@@ -10,7 +10,7 @@ The Biqu / Bigtreetech documentation is lacking
 
   https://bttwiki.com/CB2.html#flashing-the-system
 
-  I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid.
+  I flashed the system onto the eMMC (internal memory of the board), and avoided the use of a SDCard, but either option is valid.<br/><br/>
 <br/>
 <br/>
 2. Configure the Wi-Fi connection or plug in an ethernet cable to the board
