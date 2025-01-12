@@ -99,6 +99,10 @@ lsusb
 
 The board should show as: "STMicroelectronics STM Device in DFU Mode"
 
+
+![](/images/6-DFU.png)
+
+
 8. Copy the device ID (in this case "0483:df11") and flash the device with the command:
 
 ```
