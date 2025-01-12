@@ -61,10 +61,13 @@ make menuconfig
 ![](/images/2-makemenuconfig.png)
 
 
-3. Chose the correct options according to the MCU board following the official guide for the board **EXCEPT for the "Communication Interface"**
+3. Chose the correct options according to the MCU board following the official guide for the board **<ins>EXCEPT</ins> for the "Communication Interface"**
 
 
-**The "Communication Interface" should be set to "USB to CAN Bus Bridge"**
+![](/images/3-MCUconfig.png)
+
+
+**The "Communication Interface" should be set to <ins>"USB to CAN Bus Bridge"</ins>**
 
 The CAN Bus interface should be set to the correct PIN for the board
 
