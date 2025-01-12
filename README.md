@@ -109,8 +109,7 @@ You should see a network named "can0"
 
 If you type the command "lsusb" again you should see a CAN Adapter
 
-> The command to list Serial Devices "ls /etc/serial/by-id/" will not show the MCU since it is now recognized as a CAN Device instead of a Serial
-> In Klipper, the .cfg file must be changed to recognize the [mcu] by "canbus_uuid:" instead of "serial:"
+> The command to list Serial Devices "ls /etc/serial/by-id/" will not show the MCU since it is now recognized as a CAN Device instead of a Serial Device. In Klipper, the .cfg file must be changed to recognize the [mcu] by "canbus_uuid:" instead of "serial:"
 
 <br/>
 
