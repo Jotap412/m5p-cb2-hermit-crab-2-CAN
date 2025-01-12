@@ -69,9 +69,10 @@ make menuconfig
 
 **The "Communication Interface" should be set to <ins>"USB to CAN Bus Bridge"</ins>**
 
-The CAN Bus interface should be set to the correct PIN for the board
+**The "CAN Bus interface" should be set to <ins>the correct PIN for the board</ins>**
 
 > To check which PINs the CAN interface should be set to, see the official .cfg file of the board on GitHub
+> ![](/images/4-MCU-CAN-cfg.png)
 
 4. Exit configuration menu pressing "q" and then "y" to save changes
 
