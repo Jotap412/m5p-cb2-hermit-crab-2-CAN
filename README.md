@@ -64,7 +64,7 @@ make menuconfig
 3. Chose the correct options according to the MCU board following the official guide for the board **<ins>EXCEPT</ins> for the "Communication Interface"**
 
 
-![](/images/3-MCUconfigo.png)
+![](/images/3-MCU-config.png)
 
 
 **The "Communication Interface" should be set to <ins>"USB to CAN Bus Bridge"</ins>**
