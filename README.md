@@ -58,6 +58,9 @@ cd klipper/
 make menuconfig
 ```
 
+![](/images/2-makemenuconfig.png)
+
+
 3. Chose the correct options according to the MCU board following the official guide for the board **EXCEPT for the "Communication Interface"**
 
 
