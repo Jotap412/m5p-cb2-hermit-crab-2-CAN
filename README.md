@@ -34,6 +34,8 @@ login as: biqu
 password: biqu
 ```
 
+![](/images/1-SSH.png)
+
 <br/>
 
 ## 2. Flashing the MCU - Manta Controller Board
