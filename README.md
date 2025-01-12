@@ -86,6 +86,10 @@ make
    - Press and hold the BOOT0 button
    - Press and release the RESET button
    - Release the BOOT0 button
+  
+
+![](/images/5-BTNs.png)
+
 
 7. Check if the Manta board is ready by listing connected devices with:
 
