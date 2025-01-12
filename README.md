@@ -3,7 +3,7 @@ Guide on how to configure CAN Bus on the Bigtreetech Manta M5P with a CB2 V1.0 b
 
 The Biqu / Bigtreetech documentation is lacking 
 
-## Initial Setup
+## 1. Initial Setup
 
 <br/>
 
@@ -36,7 +36,7 @@ password: biqu
 
 <br/>
 
-## Flashing the MCU - Manta Controller Board
+## 2. Flashing the MCU - Manta Controller Board
 
 <br/>
 
@@ -107,8 +107,32 @@ ifconfig
 
 You should see a network named "can0"
 
+If you type the command "lsusb" again you should see a CAN Adapter
+
+> The command to list Serial Devices "ls /etc/serial/by-id/" will not show the MCU since it is now recognized as a CAN Device instead of a Serial
+> In Klipper, the .cfg file must be changed to recognize the [mcu] by "canbus_uuid:" instead of "serial:"
+
+<br/>
+
+## 3. Configuring Klipper - printer.cfg
+
+<br/>
+
+By now
+
+
+Run the command
+```
+~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+```
+And copy the "canbus_uuid" of the Klipper device, this is the ID of the MCU
+
+
+
+
 11. 
 
 References:
 https://klipper.discourse.group/t/canbus-bridge-mode-configuration/6693
 https://klipper.discourse.group/t/canbus-query-py-not-returning-ebb36s-uuid-setup-pi-4-octopus-v1-1-ebb36-v1-2/8464
+~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
