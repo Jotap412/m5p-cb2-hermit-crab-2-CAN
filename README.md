@@ -83,15 +83,15 @@ make
 ```
 
 6. Put the Manta board in boot mode
-   - Press and hold the BOOT0 button
-   - Press and release the RESET button
-   - Release the BOOT0 button
+   - Press and hold the **BOOT0** button
+   - Press and release the **RESET** button
+   - Release the **BOOT0** button
   
 
 ![](/images/5-BTNs.png)
 
 
-7. Check if the Manta board is ready by listing connected devices with:
+7. Check if the Manta board is ready to flash the firmware by listing connected devices with:
 
 ```
 lsusb
@@ -115,11 +115,13 @@ If it promps for the sudo password, enter your password (default is "biqu")
 
 ![](/images/7-Flash-MCU.png)
 
+You should see the line "File downloaded successfully"
+
 9. Press and realease the "Reset" button on the board, or power cycle the hardware
 
 If you type the command "lsusb" again you should see a CAN Adapter
 
-![](/images/7-Flash-MCU.png)
+![](/images/8-CAN_Adapter.png)
 
 > The command to list Serial Devices "ls /etc/serial/by-id/" will not show the MCU since it is now recognized as a CAN Device instead of a Serial Device. In Klipper, the .cfg file must be changed to recognize the [mcu] by "canbus_uuid:" instead of "serial:"
 
@@ -132,7 +134,7 @@ ifconfig
 
 You should see a network named "can0"
 
-
+![](/images/8-CAN_Adapter.png)
 
 <br/>
 
