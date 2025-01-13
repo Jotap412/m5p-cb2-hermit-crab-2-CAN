@@ -134,7 +134,7 @@ ifconfig
 
 You should see a network named "can0"
 
-![](/images/8-CAN_Adapter.png)
+![](/images/9-ifconfig.png)
 
 <br/>
 
