@@ -152,6 +152,8 @@ You should see a network named "can0"
 
 https://github.com/bigtreetech/docs/blob/master/docs/Hermit%20Crab%202%20Series.md
 
+Set the Status LED to gpio 16
+
 
 
 
