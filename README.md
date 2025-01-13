@@ -7,6 +7,9 @@ The Biqu / Bigtreetech documentation is lacking
 
 <br/>
 
+The 120R Resistors
+
+
 1. Plug in the CB2 module on the Manta board and flash the System image on the CB2 following the official guide:
 
   https://bttwiki.com/CB2.html#flashing-the-system
@@ -138,7 +141,23 @@ You should see a network named "can0"
 
 <br/>
 
-## 3. Configuring Klipper - printer.cfg
+## 3. Flashing the Hermit Crab 2
+
+<br/>
+
+> Make sure that the 120R resistor has a jumper
+
+
+1. Download the Katapult bootloader to the CB2, compile the bootloader and flash it to the Hermit Crab board followig the official guide
+
+https://github.com/bigtreetech/docs/blob/master/docs/Hermit%20Crab%202%20Series.md
+
+
+
+
+<br/>
+
+## 4. Configuring Klipper - printer.cfg
 
 <br/>
 
@@ -157,6 +176,8 @@ And copy the "canbus_uuid" of the Klipper device, this is the ID of the MCU
 11. 
 
 References:
+https://github.com/Klipper3d/klipper/blob/master/docs/CANBUS.md
+https://www.klipper3d.org/Config_Reference.html
 https://klipper.discourse.group/t/canbus-bridge-mode-configuration/6693
 https://klipper.discourse.group/t/canbus-query-py-not-returning-ebb36s-uuid-setup-pi-4-octopus-v1-1-ebb36-v1-2/8464
-~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0
+https://github.com/bigtreetech/Manta-M5P/blob/master/BIGTREETECH%20MANTA%20M5P%20V1.0%20User%20Manual.pdf
