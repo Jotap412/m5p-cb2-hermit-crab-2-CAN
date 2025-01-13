@@ -111,9 +111,17 @@ make flash FLASH_DEVICE=0483:df11
 
 > Make sure that you input the correct device ID in the command
 
-If it promps for the sudo password, enter your password, default is "biqu"
+If it promps for the sudo password, enter your password (default is "biqu")
+
+![](/images/7-Flash-MCU.png)
 
 9. Press and realease the "Reset" button on the board, or power cycle the hardware
+
+If you type the command "lsusb" again you should see a CAN Adapter
+
+![](/images/7-Flash-MCU.png)
+
+> The command to list Serial Devices "ls /etc/serial/by-id/" will not show the MCU since it is now recognized as a CAN Device instead of a Serial Device. In Klipper, the .cfg file must be changed to recognize the [mcu] by "canbus_uuid:" instead of "serial:"
 
 10. Check if the CAN Bus network is visible with the command
 
@@ -124,9 +132,7 @@ ifconfig
 
 You should see a network named "can0"
 
-If you type the command "lsusb" again you should see a CAN Adapter
 
-> The command to list Serial Devices "ls /etc/serial/by-id/" will not show the MCU since it is now recognized as a CAN Device instead of a Serial Device. In Klipper, the .cfg file must be changed to recognize the [mcu] by "canbus_uuid:" instead of "serial:"
 
 <br/>
 
