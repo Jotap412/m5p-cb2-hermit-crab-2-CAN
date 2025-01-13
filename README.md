@@ -173,6 +173,11 @@ Run the command
 And copy the "canbus_uuid" of the Klipper device, this is the ID of the MCU
 
 
+To use both neopixels add:
+
+```
+chain_count: 2
+```
 
 
 11. 
