@@ -57,3 +57,12 @@ In fact, in the I2C Bus used by the HermitCrab2 (i2c1b), the first pin (SCL) is 
 I tried switching the SCL and SDA wires on the probe and it began to work. It is now wired like this:
 
 ![](/images/E6-wiring.png)
+
+
+
+
+While calibrating:
+
+```
+SET_KINEMATIC_POSITION X=117.5 Y=115 Z=25
+```
